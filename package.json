@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/styles.css -w",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
   },
   "author": "",
   "license": "ISC",
