@@ -1,8 +1,16 @@
 $dark-color-gray: #212529;
 $light-gray-color: #495057;
- $light-background: #e9ecef; 
- $dark-orange-color: #d9480f;
+$light-background: #e9ecef;
+$dark-orange-color: #d9480f;
 $light-orange-color: #f76707;
+
+/// font-sizes
+$main-font-size-desktop: 5rem;
+$main-font-size-tablet: 3rem;
+$main-font-size-mobile: 1.5rem;
+
+////
+$line-height: 1.4;
 
 #header,
 .project-box {
@@ -20,7 +28,7 @@ $light-orange-color: #f76707;
 *,
 *::after,
 *::before {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: inherit;
   list-style: none;
@@ -30,7 +38,7 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   background-color: $light-background;
-  line-height: 1.4;
+  line-height: $line-height;
 }
 
 body {
@@ -38,23 +46,40 @@ body {
   color: $dark-color-gray;
   font-family: "Roboto", sans-serif;
   height: 100vh;
-  width: 100vw;
   backface-visibility: hidden;
   padding: 1rem;
   margin: 0 auto;
 }
 
-@media all and (max-width: 1086px){
+@media all and (min-width: 1086px) {
   #header,
   .project-box {
     flex-direction: column;
   }
 }
 
-$main-font-size: 5rem;
-$icons-font-size: 5rem;
+@media all and (max-width: 451px) {
+  body {
+    font-size: 2rem;
+  }
 
-$main-primary-text: 2.5rem;
+  #header,
+  .project-box {
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  $main-font-size-desktop: 1rem;
+
+  .icons-box,
+  .heading-primary--main,
+  .heading-primary--sub,
+  .main-heading-main,
+  .main-heading-text,
+  .main-heading-text {
+    font-size: $main-font-size-mobile;
+  }
+}
 
 a:link,
 a:visited {
@@ -62,11 +87,10 @@ a:visited {
   animation: moveInUp 0.8s ease-out 0.25s;
   animation-fill-mode: backwards;
   transition: all 0.4s;
-/*  *//*   font-size: 4rem;
- */  text-transform: uppercase;
+  text-transform: uppercase;
 }
 .icons-box {
-  font-size: $icons-font-size;
+  font-size: $main-font-size-desktop;
 }
 
 #header {
@@ -83,9 +107,9 @@ a:visited {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-/*   line-height: 0.9; */
   text-transform: uppercase;
   margin: 20rem auto;
+  flex: 1;
 }
 
 .navigation-links {
@@ -98,10 +122,10 @@ a:visited {
 
 .heading-primary--main,
 .heading-primary--sub {
-  font-size: $main-font-size;
   animation-fill-mode: backwards;
   font-weight: 800;
   text-align: justify;
+  font-size: $main-font-size-desktop;
 }
 .heading-primary {
   display: flex;
@@ -109,8 +133,9 @@ a:visited {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
-/*   line-height: 0.9;
- */}
+  /*   line-height: 0.9;
+ */
+}
 
 .heading-primary--main {
   animation: moveInLeft 1s ease-out;
@@ -125,10 +150,12 @@ a:visited {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  /*   width: 50%;
+ */
   z-index: 1;
   margin: 2rem auto;
   text-align: center;
+  flex: 1;
 }
 
 .square-box {
@@ -169,14 +196,14 @@ a:visited {
 
 .main-heading-main {
   animation-delay: 0.5s;
-  font-size: $main-font-size;
+  font-size: $main-font-size-desktop;
   margin: 0rem 0rem 1rem 0rem;
   font-weight: 700;
 }
 
 .main-heading-text {
   animation-delay: 0.7s;
-  font-size: $main-primary-text;
+  font-size: $main-font-size-tablet;
   line-height: 1.5;
   margin: 0 0 2rem 0;
 }
@@ -271,7 +298,7 @@ a:visited {
 
 ion-icon {
   color: $dark-color-gray;
-  font-size: $icons-font-size;
+  font-size: $main-font-size-desktop;
   &:hover {
     color: $light-orange-color;
     transform: scale(1.2);
@@ -298,11 +325,10 @@ ion-icon {
 }
 .off-screen-menu li {
   margin: 3rem;
-/*   color: $light-background;
+  /*   color: $light-background;
  */
   a:hover {
     transition: all 1s ease-in-out;
-    
   }
 }
 
@@ -334,7 +360,8 @@ nav {
 }
 .ham-menu span {
   height: 0.5rem;
-  width: 100%;
+  /*   width: 100%;
+ */
   background-color: $dark-orange-color;
   color: #212529;
   position: absolute;
@@ -394,8 +421,9 @@ form {
 }
 
 .feedback-input:focus {
-/*   margin-bottom: 1.5rem;
- */  border-color: $light-orange-color;
+  /*   margin-bottom: 1.5rem;
+ */
+  border-color: $light-orange-color;
 }
 
 textarea {
@@ -423,6 +451,7 @@ textarea {
   font-size: 5rem;
   text-align: center;
   margin-top: 25rem;
+  margin: 0 auto;
 }
 
 .ham-menu span {
@@ -469,19 +498,19 @@ footer {
   font-size: 3rem;
   font-weight: 700;
 }
-#projects-section {
+/* #projects-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 25rem auto;
-}
+} */
 
 .main-title {
   font-size: 4rem;
   margin-bottom: 20rem;
   text-align: center;
-  font-weight:700;
+  font-weight: 700;
   margin: 5rem auto;
 }
 
@@ -509,7 +538,6 @@ footer {
 
   a {
     width: fit-content;
-
   }
 }
 
@@ -542,7 +570,7 @@ footer {
 img {
   max-width: 45vw;
   margin: 0 auto;
-  border-radius: .5rem ;
+  border-radius: 0.5rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   &:hover {
@@ -559,6 +587,7 @@ form {
   max-width: 45rem;
   margin: 0 auto;
   backface-visibility: hidden;
+  padding: 0 1rem;
 }
 
 .feedback-input {
