@@ -5,7 +5,8 @@ $dark-orange-color: #d9480f;
 $light-orange-color: #f76707;
 
 /// font-sizes
-$main-font-size-desktop: 5rem;
+$main-font-size-desktop: 4rem;
+
 $main-font-size-tablet: 3rem;
 $main-font-size-mobile: 1.5rem;
 
@@ -54,11 +55,11 @@ body {
 @media all and (min-width: 1086px) {
   #header,
   .project-box {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
-@media all and (max-width: 451px) {
+@media all and (max-width: 530px) {
   body {
     font-size: 2rem;
   }
@@ -67,9 +68,8 @@ body {
   .project-box {
     flex-direction: column;
     line-height: 1.2;
+    font-size: 2rem;
   }
-
-  $main-font-size-desktop: 1rem;
 
   .icons-box,
   .heading-primary--main,
@@ -77,7 +77,16 @@ body {
   .main-heading-main,
   .main-heading-text,
   .main-heading-text {
-    font-size: $main-font-size-mobile;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .heading-primary--main,
+  .heading-primary--sub {
+    animation-fill-mode: backwards;
+    font-weight: 800;
+    text-align: center;
+    font-size: 1rem;
   }
 }
 
@@ -98,7 +107,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   gap: 10rem;
-  margin: 0 auto;
+  margin: 0 auto 25rem auto;
 }
 
 .header__text-box {
@@ -124,7 +133,7 @@ a:visited {
 .heading-primary--sub {
   animation-fill-mode: backwards;
   font-weight: 800;
-  text-align: justify;
+  text-align: center;
   font-size: $main-font-size-desktop;
 }
 .heading-primary {
@@ -320,7 +329,7 @@ ion-icon {
   justify-content: center;
 
   transition: 0.4s ease;
-  font-size: 4rem;
+  font-size: $main-font-size-tablet;
   z-index: 1;
 }
 .off-screen-menu li {
@@ -521,8 +530,6 @@ footer {
   gap: 5rem;
   /*   padding: 1rem 2rem;
  */
-  text-align: left;
-  max-width: 90%;
   /*   margin: 0 auto; */
 }
 
@@ -534,7 +541,7 @@ footer {
   flex-direction: column;
   font-size: 2rem;
   margin: 2rem auto;
-  flex-shrink: 2;
+  flex: 2;
 
   a {
     width: fit-content;
@@ -545,6 +552,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 .project-links {
@@ -568,17 +576,18 @@ footer {
 }
 
 img {
-  max-width: 45vw;
-  margin: 0 auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: 0.5rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  &:hover {
+  /*  &:hover {
     transform: scaleX(1.2) scaleY(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.2s;
-    border-radius: 0.5rem;
-  }
+    border-radius: 0.5rem; 
+  }*/
 }
 
 ///footer
