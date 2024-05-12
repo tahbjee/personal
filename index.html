@@ -18,46 +18,72 @@
           <p class="header-para">Douglas Vinicius</p>
         </div>
 
-        <nav class="header-links">
-          <ul>
-            <a href="" class="header-para">home</a>
+        <nav>
+          <input type="checkbox" id="sidebar-active" />
+          <label for="sidebar-active" class="open-sidebar-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="42px"
+              viewBox="0 -960 960 960"
+              width="42px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+          </label>
+
+          <label for="sidebar-active" id="overlay"></label>
+
+          <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="42px"
+                viewBox="0 -960 960 960"
+                width="42px"
+                fill="#e8eaed"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                />
+              </svg>
+            </label>
+            <a href="" class="header-para home-link">home</a>
             <a href="" class="header-para">projects </a>
             <a href="" class="header-para">about</a>
             <a href="" class="header-para">contact</a>
-          </ul>
+          </div>
         </nav>
       </div>
     </header>
     <section class="home-hero">
       <div class="home-hero-content">
         <h1 class="heading-primary">Douglas Vinicius</h1>
-        <p class="heading-primary-sub">
-          I am a passionate frontend developer based in London, UK. My
-          specialities are React JS and Tailwind CSS, and I love building apps
-          that are delightful to use.
-        </p>
+        <p class="heading-primary-sub"></p>
         <div class="home-hero-btn">
-          <a class="btn btn-bg">SEE MY PROJECTS</a>
+          <a class="btn btn-bg">VEJA MEUS PROJETOS</a>
         </div>
         <div class="home-hero__socials">
           <div class="home-hero__social">
-            <a href="#" class="home-hero__social-icon-link">
+            <a href="https://www.linkedin.com/in/douglasbje/?locale=pt_BR" class="home-hero__social-icon-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </div>
           <div class="home-hero__social">
-            <a href="#" class="home-hero__social-icon-link">
+            <a href="mailto:tahbje@gmail.com"" class="home-hero__social-icon-link">
               <ion-icon name="mail-outline"></ion-icon>
             </a>
           </div>
           <div class="home-hero__social">
-            <a href="#" class="home-hero__social-icon-link">
+            <a href="https://github.com/tahbjee" class="home-hero__social-icon-link">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </div>
           <div class="home-hero__social">
             <a
-              href="#"
+              href="https://wa.me/18997035408"
               class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
             >
               <ion-icon name="logo-whatsapp"></ion-icon>
@@ -71,8 +97,8 @@
         <h2 class="main-container-sec">
           <span class="main-container-sec-main"> Projects</span>
           <span class="main-container-sec-sub">
-            All my projects include links to the code and live version. Click
-            the button to learn more about each one.
+            Todos os meus projetos incluem links para o código e versão ao vivo.
+            Clique no botão para saber mais sobre cada um.
           </span>
         </h2>
 
@@ -92,7 +118,7 @@
                 and then gives you a score. It's built with functional React
                 components.
               </p>
-              <a href="#" class="project-row-content-link">Learn more</a>
+              <a href="#" class="project-row-content-link">Saber mais</a>
             </div>
           </div>
         </div>
@@ -114,7 +140,7 @@
                 and then gives you a score. It's built with functional React
                 components.
               </p>
-              <a href="#" class="project-row-content-link">Learn more</a>
+              <a href="#" class="project-row-content-link">saber mais</a>
             </div>
           </div>
         </div>
