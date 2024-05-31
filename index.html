@@ -12,14 +12,13 @@
               equeue: [],
               client_key: "gbpw48prbof5ho3nm9wv539p"
           };
-          /* OPTIONAL: email for identify request*/
           // window.sib.email_id = 'example@domain.com';
           window.sendinblue = {};
           for (var j = ['track', 'identify', 'trackLink', 'page'], i = 0; i < j.length; i++) {
-          (function(k) {
-              window.sendinblue[k] = function() {
-                  var arg = Array.prototype.slice.call(arguments);
-                  (window.sib[k] || function() {
+              (function(k) {
+                  window.sendinblue[k] = function() {
+                      var arg = Array.prototype.slice.call(arguments);
+                      (window.sib[k] || function() {
                           var t = {};
                           t[k] = arg;
                           window.sib.equeue.push(t);
@@ -29,9 +28,14 @@
           }
           var n = document.createElement("script"),
               i = document.getElementsByTagName("script")[0];
-          n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
+          n.type = "text/javascript";
+          n.id = "sendinblue-js";
+          n.async = true;
+          n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key;
+          i.parentNode.insertBefore(n, i);
+          window.sendinblue.page("Portfolio | Douglas"); // Pass the page name as a string
       })();
-      </script>
+  </script>
   </head>
   <body>
     <header id="header">
