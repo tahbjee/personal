@@ -12,4 +12,4 @@ paras.forEach((para) => {
     sidebarCheckbox.checked = false;
     console.log("Successful");
   });
-});
+}); 
