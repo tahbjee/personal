@@ -284,23 +284,23 @@ ion-icon {
 
 .project-row-content-sub {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 500; 
   color: #626568;
   line-height: 1.8;
   margin-bottom: 2em;
   max-width: 50em;
 }
 
-.project-row-content-link {
+.project-row-content-link {   
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #364fc7;
-  width: 12em;
-  height: 4em;
+  width: 20rem;
+  height: 6rem;
   font-weight: 800;
   border-radius: 5px;
-  font-size: 1.6rem;
+  font-size: 1.6rem;          
 }
 .about {
   background-color: #f1f3f5;
@@ -313,7 +313,7 @@ ion-icon {
   gap: 3em;
   margin: 0 auto;
   width: 90%;
-  padding: 3em 0;
+  padding: 3em 0;  
 }
 
 .about-content-main {
@@ -436,6 +436,11 @@ ion-icon {
   .heading-primary {
     font-size: 4rem;
   }
+
+  .project-row-content-link {
+    width: 15rem;
+  }
+
 }
 
 .footer-content {
@@ -535,5 +540,8 @@ ion-icon {
 @media only screen and (min-width: 700px) {
   .about-project {
     margin: 0 25%;
+  }
+  .project-row-content-link {
+    width: 20rem;
   }
 }

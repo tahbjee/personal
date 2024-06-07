@@ -250,8 +250,8 @@ ion-icon {
   justify-content: center;
   align-items: center;
   background-color: #364fc7;
-  width: 12em;
-  height: 4em;
+  width: 20rem;
+  height: 6rem;
   font-weight: 800;
   border-radius: 5px;
   font-size: 1.6rem; }
@@ -358,7 +358,9 @@ ion-icon {
   .btn {
     font-size: 1.65rem; }
   .heading-primary {
-    font-size: 4rem; } }
+    font-size: 4rem; }
+  .project-row-content-link {
+    width: 15rem; } }
 
 .footer-content {
   display: flex;
@@ -439,4 +441,6 @@ ion-icon {
 
 @media only screen and (min-width: 700px) {
   .about-project {
-    margin: 0 25%; } }
+    margin: 0 25%; }
+  .project-row-content-link {
+    width: 20rem; } }
